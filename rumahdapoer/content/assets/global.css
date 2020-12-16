@@ -17,7 +17,6 @@ section {
 	margin-right: auto;
 	margin-top: 0;
 	margin-bottom: 0;
-	/*padding-left: 5vw;*/
 }
 
 header {
@@ -27,9 +26,7 @@ header {
 	background-color: #f8eac5;
 	float: left;
 	display: inline-block;
-	/*box-shadow: 0px 1px 1px #d9d9d9;*/
 	z-index: 100;
-	/*margin-top: 100px;*/
 }
 
 header nav section .menu img {
@@ -49,13 +46,12 @@ header nav section .close img {
 }
 
 .menu h1 {
-	margin-top: 20px;
-	padding-right: 2%;
-	float: left;
-	margin-left: 20px;
+	padding-top: 20px;
+	padding-right: 15%;
 	font-family: Montserrat;
 	font-weight: 700;
 	color: #904e22;
+	text-align: center;
 }
 
 
@@ -132,7 +128,6 @@ main {
 
 .home {
 	text-align: center;
-	/*margin-left: -7vw;*/
 }
 
 .home img {
@@ -196,9 +191,7 @@ main {
 
 #output img {
 	width: 100%;
-	/*margin-left: 60px;*/
 	margin-bottom: 10px;
 	display: inline-block;
 	text-align: center;
 }
-
