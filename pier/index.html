@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>San Francisco Pier 39 VR Tour</title>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins&display=swap');
+
+    h1 {
+      font-family: 'Bree Serif', serif;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #information {
+      position: fixed;
+      top: 15%;
+      left: 10%;
+      width: 70%;
+      /*height: 30%;*/
+      background-color: rgba(252, 239, 129, 0.8);
+      border-style: dotted;
+      border-width: 2px;
+      border-radius: 20px;
+      text-align: center;
+      margin: auto;
+      padding: 2%;
+      display: none;
+      opacity: 0;
+      transition: all 1s;
+    }
+
+    #information2 {
+      position: fixed;
+      top: 20%;
+      left: 10%;
+      width: 70%;
+      /*height: 30%;*/
+      background-color: rgba(252, 239, 129, 0.8);
+      border-style: dotted;
+      border-width: 2px;
+      border-radius: 20px;
+      text-align: center;
+      margin: auto;
+      padding: 2%;
+      display: none;
+      opacity: 0;
+      transition: all 1s;
+    }
+
+    #information3 {
+      position: fixed;
+      top: 20%;
+      left: 10%;
+      width: 70%;
+      /*height: 30%;*/
+      background-color: rgba(252, 239, 129, 0.8);
+      border-style: dotted;
+      border-width: 2px;
+      border-radius: 20px;
+      text-align: center;
+      margin: auto;
+      padding: 2%;
+      display: none;
+      opacity: 0;
+      transition: all 1s;
+    }
+
+    #information4 {
+      position: fixed;
+      top: 20%;
+      left: 10%;
+      width: 70%;
+      /*height: 30%;*/
+      background-color: rgba(252, 239, 129, 0.8);
+      border-style: dotted;
+      border-width: 2px;
+      border-radius: 20px;
+      text-align: center;
+      margin: auto;
+      padding: 2%;
+      display: none;
+      opacity: 0;
+      transition: all 1s;
+    }
+
+    #information5 {
+      position: fixed;
+      top: 20%;
+      left: 10%;
+      width: 70%;
+      /*height: 30%;*/
+      background-color: rgba(252, 239, 129, 0.8);
+      border-style: dotted;
+      border-width: 2px;
+      border-radius: 20px;
+      text-align: center;
+      margin: auto;
+      padding: 2%;
+      display: none;   
+      opacity: 0;
+      transition: all 1s; 
+    }
+
+    #information6 {
+      position: fixed;
+      top: 20%;
+      left: 10%;
+      width: 70%;
+      /*height: 30%;*/
+      background-color: rgba(252, 239, 129, 0.8);
+      border-style: dotted;
+      border-width: 2px;
+      border-radius: 20px;
+      text-align: center;
+      margin: auto;
+      padding: 2%;
+      display: none;
+      opacity: 0;
+      transition: all 1s;
+    }
+
+    #information7 {
+      position: fixed;
+      top: 20%;
+      left: 10%;
+      width: 70%;
+      /*height: 30%;*/
+      background-color: rgba(252, 239, 129, 0.8);
+      border-style: dotted;
+      border-width: 2px;
+      border-radius: 20px;
+      text-align: center;
+      margin: auto;
+      padding: 2%;
+      display: none;
+      opacity: 0;
+      transition: all 1s;
+    }
+
+    .link {
+      text-decoration: none;
+      font-size: 24px;
+      color: #325EEE;
+      font-family: 'Bree Serif', serif;
+    }
+
+    .close {
+      cursor: pointer;
+    }
+
+    .logo {
+      position: relative;
+      width: calc(30% - 20px);
+      height: calc(100% - 20px);
+      padding: 10px;
+      float: left;
+    }
+
+    .logo img {
+      width: 100%
+    }
+
+    .desc {
+      position: relative;
+      width: calc(70% - 20px);
+      height: calc(100% - 20px);
+      padding: 10px;
+      float: left;
+    }
+
+	</style>
+</head>
+<body>
+
+<a-scene >
+  <a-entity id="default_angle" camera position="0 0 0" look-controls wasd-controls> 
+  <a-cursor fuse="true" fuseTimeout="500"></a-cursor>
+    </a-entity>
+    <a-image src="marina.png" scale="5 8 0.05" animation="property: rotation; to: 0 360 0; dur: 2000; easing: linear; loop: true" position="-5.569 2.288 -19.96"></a-image>
+
+    <a-box id="thatthing" scale="5 5 5" position="-5.569 2.288 -19.96" color="red" material="opacity: 0" geometry=""></a-box>
+
+    <a-image src="souvenir2.png" scale="5 5 1" animation="property: rotation; to: 0 360 0; dur: 2000; easing: linear; loop: true" position="-3.17554 2.00692 23.57489" material="" geometry=""></a-image>
+
+    <a-box id="thatthing2" scale="5 5 5" position="-3.17554 2.00692 23.57489" color="red" material="opacity: 0" geometry=""></a-box>
+
+    <a-image src="eagle.png" animation="property: rotation; to: 0 360 0; dur: 2000; easing: linear; loop: true" position="-12.05331 12 24.62421" material="" geometry="" scale="3.48 1.52 1"></a-image>
+
+    <a-box id="thatthing3" scale="4 2 2" position="-12.05331 12 24.62421" color="red" material="opacity: 0" geometry=""></a-box>
+
+    <a-image src="wipeout.png" scale="7 3 0.71001" animation="property: rotation; to: 0 360 0; dur: 2000; easing: linear; loop: true" position="-30.381 4.198 24.62421" material="" geometry=""></a-image>
+
+    <a-box id="thatthing4" scale="5 5 5" position="-30.381 4.198 24.62421" color="red" material="opacity: 0" geometry=""></a-box>
+
+    <a-image src="aqua.png" scale="6 5 0.00001" animation="property: rotation; to: 0 360 0; dur: 2000; easing: linear; loop: true" position="-13.728 6.87 -7.99" material="" geometry=""></a-image>
+
+    <a-box id="thatthing5" scale="5 5 5" position="-13.728 6.87 -7.99" color="red" material="opacity: 0" geometry=""></a-box>
+
+    <a-image src="icon.png" scale="4 4 0.00001" animation="property: rotation; to: 0 360 0; dur: 2000; easing: linear; loop: true" position="-14.857 4.483 24.62421" material="" geometry=""></a-image>
+
+    <a-box id="thatthing6" scale="2.5 3 4" position="-14.857 4.483 24.62421" color="red" material="opacity: 0" geometry=""></a-box>
+
+    <a-image src="fish.jpeg" scale="8 4 2.08" animation="property: rotation; to: 0 360 0; dur: 2000; easing: linear; loop: true" position="-46.32782 25.93519 40.97105" material="" geometry=""></a-image>
+
+    <a-box id="thatthing7" scale="5 5 5" position="-46.32782 25.93519 40.97105" color="red" material="opacity: 0" geometry=""></a-box>
+
+    <a-entity id="table" gltf-model="bench/scene.gltf" position="1.75695 -0.94676 -3.67587" scale="0.008 0.005 0.005" rotation="0 90 0"></a-entity>
+
+    <a-entity id="seagull" gltf-model="lowpoly_seagull/scene.gltf" position="-21.68608 10 7.25446" scale="2 2 2" rotation="0 180 0"></a-entity>
+
+    <a-entity id="seagull2" gltf-model="lowpoly_seagull/scene.gltf" position="-0.92932 10 7.25446" scale="2 2 2" rotation="-10.11 180 0"></a-entity>
+
+    <a-entity id="seagull3" gltf-model="lowpoly_seagull/scene.gltf" position="-50 15 20" scale="2 2 2" rotation="0 180 0"></a-entity>
+
+  <a-sky src="pier2.jpg"></a-sky>
+</a-scene>
+
+<div id="information" style="display:none;">
+  <img class="logo" src="photo/pier_39.jpg">
+  <h1>Welcome To San Francisco Pier 39</h1>
+  <div class="desc">
+  <h3>Pier 39 is a shopping center and popular tourist attraction built on a pier in San Francisco, California. At Pier 39, there are shops, restaurants, a video arcade, street performances, the Aquarium of the Bay, virtual 3D rides, and views of California sea lions hauled out on docks on Pier 39's marina.</h3>
+  <a class="link" href="https://www.pier39.com/" target="_blank">Go to Pier 39 Website</a>
+  <h4 class="close" onclick="document.querySelector('#information').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+  </div>
+</div>
+
+<div id="information2" style="display:none;">
+  <img class="logo" src="photo/souvenir.jpg">
+  <div class="desc">
+  <h1>This is the Souvenir Shop</h1>
+  <h3>The Souvenir shop in the Pier has one of the most authentic and never seen before side of the pier. Come and Visit us before it runs out!</h3>
+  <h4 class="close" onclick="document.querySelector('#information2').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information2').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+  </div>
+</div>
+
+<div id="information3" style="display:none;" >
+  <img class="logo" src="photo/eagle_cafe.png">
+  <div class="desc">
+  <h1>This is the Eagle Cafe</h1>
+  <h3>Welcome to The Eagle Caf&#233;, a new member of the Simmons Family Waterfront Hospitality Group. Click the link provided if you would like to see our men or researvations. </h3>
+  <a class="link" href="https://eaglecafe.com/" target="_blank">Go to Eagle Cafe Website</a>
+  <h4 class="close" onclick="document.querySelector('#information3').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information3').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+  </div>
+</div>
+
+<div id="information4" style="display:none;" >
+  <img class="logo" src="photo/wipeout.jpg">
+  <div class="desc">
+  <h1>This is Wipe Out Bar and Grill</h1>
+  <h3>Wipeout Bar & Grill is the San Francisco Bay Area&#39;s wildly-popular surfing restaurant. With the wide-open patio, roaring fire pit, celebrity-signed surfboards, and world-famous beach signs, Wipeout Bar & Grill is San Francisco&#39;s killer hangout spot.</h3>
+  <a class="link" href="https://wipeoutbarandgrill.com/" target="_blank">Go to Wipe Out Bar and Grill Website</a>
+  <h4 class="close" onclick="document.querySelector('#information4').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information4').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+  </div>    
+</div>
+
+<div id="information5" style="display:none;" >
+  <img class="logo" src="photo/aquarium.jpg">
+  <div class="desc">
+  <h1>This is Aquarium of the Bay</h1>
+  <h3>Aquarium of the Bay is a public aquarium located at The Embarcadero and Beach Street, at the edge of Pier 39 in San Francisco, California. The aquarium is focused on local aquatic animals from the San Francisco Bay and neighboring rivers and watersheds as far as the Sierras.</h3>
+  <a class="link" href="https://www.aquariumofthebay.org/" target="_blank">Go to Aquarium of the Bay Website</a>
+  <h4 class="close" onclick="document.querySelector('#information5').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information5').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+  </div>
+</div>
+
+<div id="information6" style="display:none;" >
+  <h1>This is the Information Centre</h1>
+  <h3>When lost or need assistance on where you want togo, feel free and ask for help in our booth.</h3>
+  <h4 class="close" onclick="document.querySelector('#information6').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information6').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+</div>
+
+<div id="information7" style="display:none;" >
+  <img class="logo" src="photo/fog_harbour.jpg">
+  <div class="desc">
+  <h1>This is Fog Harbor Fish House</h1>
+  <h3>Fog Harbor Fish House, ranked top 5 restaurants in San Francisco according to Yelp, offers the quintessential San Francisco waterfront dining experience. Take in award-winning views of the San Francisco Bay and the Golden Gate Bridge while enjoying complimentary sourdough bread baked in-house every hour, and dining on the freshest sustainable seafood and meats available.</h3>
+  <a class="link" href="https://fogharbor.com/" target="_blank">Go to Fog Harbor Fish House Website</a>
+  <h4 class="close" onclick="document.querySelector('#information7').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information7').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+  </div>
+</div>
+
+<script>
+  var thatthing = document.querySelector('#thatthing');
+
+  thatthing.addEventListener('fusing', function (evt) {
+    
+    var check = document.querySelector('#information').style.display;
+    if (check == 'none') {
+      document.querySelector('#information').style.display = 'block';
+      setTimeout(function(){ 
+        document.querySelector('#information').style.opacity = '1';
+      }, 500);
+    } else {
+      document.querySelector('#information').style.opacity = '0';
+      setTimeout(function(){ 
+        document.querySelector('#information').style.display = 'none';
+      }, 1000);
+    }
+
+  });
+
+  var thatthing2 = document.querySelector('#thatthing2');
+
+  thatthing2.addEventListener('fusing', function (evt) {
+    
+    var check = document.querySelector('#information2').style.display;
+    if (check == 'none') {
+      document.querySelector('#information2').style.display = 'block';
+      setTimeout(function(){ 
+        document.querySelector('#information2').style.opacity = '1';
+      }, 500);
+    } else {
+      document.querySelector('#information2').style.opacity = '0';
+      setTimeout(function(){ 
+        document.querySelector('#information2').style.display = 'none';
+      }, 1000);
+    }
+
+  });
+
+  var thatthing3 = document.querySelector('#thatthing3');
+
+  thatthing3.addEventListener('fusing', function (evt) {
+    
+    var check = document.querySelector('#information3').style.display;
+    if (check == 'none') {
+      document.querySelector('#information3').style.display = 'block';
+      setTimeout(function(){ 
+        document.querySelector('#information3').style.opacity = '1';
+      }, 500);
+    } else {
+      document.querySelector('#information3').style.opacity = '0';
+      setTimeout(function(){ 
+        document.querySelector('#information3').style.display = 'none';
+      }, 1000);
+    }
+
+  });
+
+    var thatthing4 = document.querySelector('#thatthing4');
+
+  thatthing4.addEventListener('fusing', function (evt) {
+    
+    var check = document.querySelector('#information4').style.display;
+    if (check == 'none') {
+      document.querySelector('#information4').style.display = 'block';
+      setTimeout(function(){ 
+        document.querySelector('#information4').style.opacity = '1';
+      }, 500);
+    } else {
+      document.querySelector('#information4').style.opacity = '0';
+      setTimeout(function(){ 
+        document.querySelector('#information4').style.display = 'none';
+      }, 1000);
+    }
+
+  });
+
+   var thatthing5 = document.querySelector('#thatthing5');
+
+  thatthing5.addEventListener('fusing', function (evt) {
+    
+    var check = document.querySelector('#information5').style.display;
+    if (check == 'none') {
+      document.querySelector('#information5').style.display = 'block';
+      setTimeout(function(){ 
+        document.querySelector('#information5').style.opacity = '1';
+      }, 500);
+    } else {
+      document.querySelector('#information5').style.opacity = '0';
+      setTimeout(function(){ 
+        document.querySelector('#information5').style.display = 'none';
+      }, 1000);
+    }
+
+  });
+
+    var thatthing6 = document.querySelector('#thatthing6');
+
+  thatthing6.addEventListener('fusing', function (evt) {
+    
+    var check = document.querySelector('#information6').style.display;
+    if (check == 'none') {
+      document.querySelector('#information6').style.display = 'block';
+      setTimeout(function(){ 
+        document.querySelector('#information6').style.opacity = '1';
+      }, 500);
+    } else {
+      document.querySelector('#information6').style.opacity = '0';
+      setTimeout(function(){ 
+        document.querySelector('#information6').style.display = 'none';
+      }, 1000);
+    }
+
+  });
+
+  var thatthing7 = document.querySelector('#thatthing7');
+
+  thatthing7.addEventListener('fusing', function (evt) {
+    
+    var check = document.querySelector('#information7').style.display;
+    if (check == 'none') {
+      document.querySelector('#information7').style.display = 'block';
+      setTimeout(function(){ 
+        document.querySelector('#information7').style.opacity = '1';
+      }, 500);
+    } else {
+      document.querySelector('#information7').style.opacity = '0';
+      setTimeout(function(){ 
+        document.querySelector('#information7').style.display = 'none';
+      }, 1000);
+    }
+
+  });
+
+  var seagull = document.querySelector('#seagull');
+      seagull.addEventListener('fusing', function (evt) {
+        evt.target.setAttribute('animation', 'property: position; to: -81 10 7.25446; dur: 1000; easing: linear; loop: false');
+      });
+
+  var seagull2 = document.querySelector('#seagull2');
+      seagull2.addEventListener('fusing', function (evt) {
+        evt.target.setAttribute('animation', 'property: position; to: -60 10 7.25446; dur: 1000; easing: linear; loop: false');
+      });
+
+  var seagull3 = document.querySelector('#seagull3');
+      seagull3.addEventListener('fusing', function (evt) {
+        evt.target.setAttribute('animation', 'property: position; to: -120 15 20; dur: 1000; easing: linear; loop: false');
+      });    
+</script> 
+
+</body>
+</html>
