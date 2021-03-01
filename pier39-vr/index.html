@@ -99,9 +99,9 @@
       text-align: center;
       margin: auto;
       padding: 2%;
-      display: none;   
+      display: none;
       opacity: 0;
-      transition: all 1s; 
+      transition: all 1s;
     }
 
     #information6 {
@@ -176,7 +176,7 @@
 <body>
 
 <a-scene >
-  <a-entity id="default_angle" camera position="0 0 0" look-controls wasd-controls> 
+  <a-entity id="default_angle" camera position="0 0 0" look-controls wasd-controls>
   <a-cursor fuse="true" fuseTimeout="500"></a-cursor>
     </a-entity>
     <a-image src="marina.png" scale="5 8 0.05" animation="property: rotation; to: 0 360 0; dur: 2000; easing: linear; loop: true" position="-5.569 2.288 -19.96"></a-image>
@@ -220,7 +220,7 @@
 
 <div id="information" style="display:none;">
   <img class="logo" src="photo/pier_39.jpg">
-  <h1>Welcome To San Francisco Pier 39</h1>
+  <h1>Welcome To San Francisco Pier 39!</h1>
   <div class="desc">
   <h3>Pier 39 is a shopping center and popular tourist attraction built on a pier in San Francisco, California. At Pier 39, there are shops, restaurants, a video arcade, street performances, the Aquarium of the Bay, virtual 3D rides, and views of California sea lions hauled out on docks on Pier 39's marina.</h3>
   <a class="link" href="https://www.pier39.com/" target="_blank">Go to Pier 39 Website</a>
@@ -232,7 +232,7 @@
 <div id="information2" style="display:none;">
   <img class="logo" src="photo/souvenir.jpg">
   <div class="desc">
-  <h1>This is the Souvenir Shop</h1>
+  <h1>This is the Souvenir Shop!</h1>
   <h3>The Souvenir shop in the Pier has one of the most authentic and never seen before side of the pier. Come and Visit us before it runs out!</h3>
   <h4 class="close" onclick="document.querySelector('#information2').style.opacity = '0';
       setTimeout(function(){document.querySelector('#information2').style.display = 'none';}, 2000);">Click anywhere to close</h4>
@@ -258,7 +258,7 @@
   <a class="link" href="https://wipeoutbarandgrill.com/" target="_blank">Go to Wipe Out Bar and Grill Website</a>
   <h4 class="close" onclick="document.querySelector('#information4').style.opacity = '0';
       setTimeout(function(){document.querySelector('#information4').style.display = 'none';}, 2000);">Click anywhere to close</h4>
-  </div>    
+  </div>
 </div>
 
 <div id="information5" style="display:none;" >
@@ -294,16 +294,16 @@
   var thatthing = document.querySelector('#thatthing');
 
   thatthing.addEventListener('fusing', function (evt) {
-    
+
     var check = document.querySelector('#information').style.display;
     if (check == 'none') {
       document.querySelector('#information').style.display = 'block';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information').style.opacity = '1';
       }, 500);
     } else {
       document.querySelector('#information').style.opacity = '0';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information').style.display = 'none';
       }, 1000);
     }
@@ -313,16 +313,16 @@
   var thatthing2 = document.querySelector('#thatthing2');
 
   thatthing2.addEventListener('fusing', function (evt) {
-    
+
     var check = document.querySelector('#information2').style.display;
     if (check == 'none') {
       document.querySelector('#information2').style.display = 'block';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information2').style.opacity = '1';
       }, 500);
     } else {
       document.querySelector('#information2').style.opacity = '0';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information2').style.display = 'none';
       }, 1000);
     }
@@ -332,16 +332,16 @@
   var thatthing3 = document.querySelector('#thatthing3');
 
   thatthing3.addEventListener('fusing', function (evt) {
-    
+
     var check = document.querySelector('#information3').style.display;
     if (check == 'none') {
       document.querySelector('#information3').style.display = 'block';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information3').style.opacity = '1';
       }, 500);
     } else {
       document.querySelector('#information3').style.opacity = '0';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information3').style.display = 'none';
       }, 1000);
     }
@@ -351,16 +351,16 @@
     var thatthing4 = document.querySelector('#thatthing4');
 
   thatthing4.addEventListener('fusing', function (evt) {
-    
+
     var check = document.querySelector('#information4').style.display;
     if (check == 'none') {
       document.querySelector('#information4').style.display = 'block';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information4').style.opacity = '1';
       }, 500);
     } else {
       document.querySelector('#information4').style.opacity = '0';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information4').style.display = 'none';
       }, 1000);
     }
@@ -370,16 +370,16 @@
    var thatthing5 = document.querySelector('#thatthing5');
 
   thatthing5.addEventListener('fusing', function (evt) {
-    
+
     var check = document.querySelector('#information5').style.display;
     if (check == 'none') {
       document.querySelector('#information5').style.display = 'block';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information5').style.opacity = '1';
       }, 500);
     } else {
       document.querySelector('#information5').style.opacity = '0';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information5').style.display = 'none';
       }, 1000);
     }
@@ -389,16 +389,16 @@
     var thatthing6 = document.querySelector('#thatthing6');
 
   thatthing6.addEventListener('fusing', function (evt) {
-    
+
     var check = document.querySelector('#information6').style.display;
     if (check == 'none') {
       document.querySelector('#information6').style.display = 'block';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information6').style.opacity = '1';
       }, 500);
     } else {
       document.querySelector('#information6').style.opacity = '0';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information6').style.display = 'none';
       }, 1000);
     }
@@ -408,16 +408,16 @@
   var thatthing7 = document.querySelector('#thatthing7');
 
   thatthing7.addEventListener('fusing', function (evt) {
-    
+
     var check = document.querySelector('#information7').style.display;
     if (check == 'none') {
       document.querySelector('#information7').style.display = 'block';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information7').style.opacity = '1';
       }, 500);
     } else {
       document.querySelector('#information7').style.opacity = '0';
-      setTimeout(function(){ 
+      setTimeout(function(){
         document.querySelector('#information7').style.display = 'none';
       }, 1000);
     }
@@ -437,8 +437,8 @@
   var seagull3 = document.querySelector('#seagull3');
       seagull3.addEventListener('fusing', function (evt) {
         evt.target.setAttribute('animation', 'property: position; to: -120 15 20; dur: 1000; easing: linear; loop: false');
-      });    
-</script> 
+      });
+</script>
 
 </body>
 </html>
