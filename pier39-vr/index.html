@@ -7,6 +7,17 @@
     @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins&display=swap');
 
     h1 {
+      font-size: 15px;
+      font-family: 'Bree Serif', serif;
+    }
+
+    h3 {
+      font-size: 15px;
+      font-family: 'Bree Serif', serif;
+    }
+
+    h4 {
+      font-size: 15px;
       font-family: 'Bree Serif', serif;
     }
 
@@ -142,7 +153,7 @@
 
     .link {
       text-decoration: none;
-      font-size: 24px;
+      font-size: 15px;
       color: #325EEE;
       font-family: 'Bree Serif', serif;
     }
@@ -173,7 +184,7 @@
 
 	</style>
 </head>
-<body>
+<body onload="document.getElementById('loader').style.display='none'">
 
 <a-scene >
   <a-entity id="default_angle" camera position="0 0 0" look-controls wasd-controls>
@@ -218,75 +229,75 @@
   <a-sky src="pier2.jpg"></a-sky>
 </a-scene>
 
-<div id="information" style="display:none;">
+<div id="information" style="display:none;" onclick="document.querySelector('#information').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information').style.display = 'none';}, 2000);">
   <img class="logo" src="photo/pier_39.jpg">
-  <h1>Welcome To San Francisco Pier 39!</h1>
+  <h1>Welcome To San Francisco Pier 39</h1>
   <div class="desc">
   <h3>Pier 39 is a shopping center and popular tourist attraction built on a pier in San Francisco, California. At Pier 39, there are shops, restaurants, a video arcade, street performances, the Aquarium of the Bay, virtual 3D rides, and views of California sea lions hauled out on docks on Pier 39's marina.</h3>
   <a class="link" href="https://www.pier39.com/" target="_blank">Go to Pier 39 Website</a>
-  <h4 class="close" onclick="document.querySelector('#information').style.opacity = '0';
-      setTimeout(function(){document.querySelector('#information').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+  <h4 class="close">Click anywhere to close</h4>
   </div>
 </div>
 
-<div id="information2" style="display:none;">
+<div id="information2" style="display:none;" onclick="document.querySelector('#information2').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information2').style.display = 'none';}, 2000);">
   <img class="logo" src="photo/souvenir.jpg">
   <div class="desc">
-  <h1>This is the Souvenir Shop!</h1>
+  <h1>This is the Souvenir Shop</h1>
   <h3>The Souvenir shop in the Pier has one of the most authentic and never seen before side of the pier. Come and Visit us before it runs out!</h3>
-  <h4 class="close" onclick="document.querySelector('#information2').style.opacity = '0';
-      setTimeout(function(){document.querySelector('#information2').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+  <h4 class="close">Click anywhere to close</h4>
   </div>
 </div>
 
-<div id="information3" style="display:none;" >
+<div id="information3" style="display:none;" onclick="document.querySelector('#information3').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information3').style.display = 'none';}, 2000);">
   <img class="logo" src="photo/eagle_cafe.png">
   <div class="desc">
   <h1>This is the Eagle Cafe</h1>
   <h3>Welcome to The Eagle Caf&#233;, a new member of the Simmons Family Waterfront Hospitality Group. Click the link provided if you would like to see our men or researvations. </h3>
   <a class="link" href="https://eaglecafe.com/" target="_blank">Go to Eagle Cafe Website</a>
-  <h4 class="close" onclick="document.querySelector('#information3').style.opacity = '0';
-      setTimeout(function(){document.querySelector('#information3').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+  <h4 class="close">Click anywhere to close</h4>
   </div>
 </div>
 
-<div id="information4" style="display:none;" >
+<div id="information4" style="display:none;" onclick="document.querySelector('#information4').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information4').style.display = 'none';}, 2000);">
   <img class="logo" src="photo/wipeout.jpg">
   <div class="desc">
   <h1>This is Wipe Out Bar and Grill</h1>
   <h3>Wipeout Bar & Grill is the San Francisco Bay Area&#39;s wildly-popular surfing restaurant. With the wide-open patio, roaring fire pit, celebrity-signed surfboards, and world-famous beach signs, Wipeout Bar & Grill is San Francisco&#39;s killer hangout spot.</h3>
   <a class="link" href="https://wipeoutbarandgrill.com/" target="_blank">Go to Wipe Out Bar and Grill Website</a>
-  <h4 class="close" onclick="document.querySelector('#information4').style.opacity = '0';
-      setTimeout(function(){document.querySelector('#information4').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+  <h4 class="close">Click anywhere to close</h4>
   </div>
 </div>
 
-<div id="information5" style="display:none;" >
+<div id="information5" style="display:none;" onclick="document.querySelector('#information5').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information5').style.display = 'none';}, 2000);">
   <img class="logo" src="photo/aquarium.jpg">
   <div class="desc">
   <h1>This is Aquarium of the Bay</h1>
   <h3>Aquarium of the Bay is a public aquarium located at The Embarcadero and Beach Street, at the edge of Pier 39 in San Francisco, California. The aquarium is focused on local aquatic animals from the San Francisco Bay and neighboring rivers and watersheds as far as the Sierras.</h3>
   <a class="link" href="https://www.aquariumofthebay.org/" target="_blank">Go to Aquarium of the Bay Website</a>
-  <h4 class="close" onclick="document.querySelector('#information5').style.opacity = '0';
-      setTimeout(function(){document.querySelector('#information5').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+  <h4 class="close">Click anywhere to close</h4>
   </div>
 </div>
 
-<div id="information6" style="display:none;" >
+<div id="information6" style="display:none;" onclick="document.querySelector('#information6').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information6').style.display = 'none';}, 2000);">
   <h1>This is the Information Centre</h1>
   <h3>When lost or need assistance on where you want togo, feel free and ask for help in our booth.</h3>
-  <h4 class="close" onclick="document.querySelector('#information6').style.opacity = '0';
-      setTimeout(function(){document.querySelector('#information6').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+  <h4 class="close">Click anywhere to close</h4>
 </div>
 
-<div id="information7" style="display:none;" >
+<div id="information7" style="display:none;" onclick="document.querySelector('#information7').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#information7').style.display = 'none';}, 2000);">
   <img class="logo" src="photo/fog_harbour.jpg">
   <div class="desc">
   <h1>This is Fog Harbor Fish House</h1>
   <h3>Fog Harbor Fish House, ranked top 5 restaurants in San Francisco according to Yelp, offers the quintessential San Francisco waterfront dining experience. Take in award-winning views of the San Francisco Bay and the Golden Gate Bridge while enjoying complimentary sourdough bread baked in-house every hour, and dining on the freshest sustainable seafood and meats available.</h3>
   <a class="link" href="https://fogharbor.com/" target="_blank">Go to Fog Harbor Fish House Website</a>
-  <h4 class="close" onclick="document.querySelector('#information7').style.opacity = '0';
-      setTimeout(function(){document.querySelector('#information7').style.display = 'none';}, 2000);">Click anywhere to close</h4>
+  <h4 class="close">Click anywhere to close</h4>
   </div>
 </div>
 
@@ -439,6 +450,8 @@
         evt.target.setAttribute('animation', 'property: position; to: -120 15 20; dur: 1000; easing: linear; loop: false');
       });
 </script>
+
+<div id="loader" style="width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; z-index: 999; background-color:#325EEE; background-image: url('loader.png'); background-repeat: no-repeat; background-position: center center;"></div>
 
 </body>
 </html>
