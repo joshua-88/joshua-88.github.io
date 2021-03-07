@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <title>Room Two</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <style>
+      body {
+            font-family: 'Oswald', sans-serif;
+          }
+
+      #keyvault {
+      display: none;
+      }
+
+      #riddle {
+      position: fixed;
+      top: 25%;
+      left: 11%;
+      width: 70%;
+      /*height: 30%;*/
+      background-color: rgba(252, 254, 1234, 0.8);
+      border-style: dotted;
+      border-width: 2px;
+      border-radius: 20px;
+      text-align: center;
+      margin: auto;
+      padding: 2%;
+      display: none;
+      opacity: 0;
+      transition: all 1s;
+    }
+
+    .close {
+      cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+ <a-scene>
+      <a-entity camera="" position="-2.1638541009715766 5.50842 -8.55147014471551" look-controls="" wasd-controls="" rotation="0 0 0"> 
+        <a-cursor fuse="true" fusetimeout="500" material="" raycaster="" cursor="" geometry=""></a-cursor>
+      </a-entity>
+      <a-entity text="value: A red house is made from red bricks,; align: center; color: white" position="14.56715 13.0892 -6.46702" scale="40 40 0.00001" rotation="0 -90 0"></a-entity>
+      <a-entity text="value: A yellow house is made from yellow bricks,; align: center; color: white" position="14.56715 10 -9.55063" scale="40 40 0.00001" rotation="0 -90 0"></a-entity>
+      <a-entity text="value: What is a green house made out of?; align: center; color: white" position="14.56715 6.69247 -12.40388" scale="40 40 0.00001" rotation="0 -90 0"></a-entity>
+      <a-entity id="room" gltf-model="kitchen_room/scene.gltf" position="" scale="0.02 0.02 0.02" rotation="0 90 0"></a-entity>
+
+      <a-entity id="woodkey" gltf-model="rust_key/scene.gltf" position="14.19742 3.4 -1.30185" scale="0.4 0.4 0.4" rotation="0 -90 0"></a-entity>
+      <a-entity id="greenkey" gltf-model="sm_key/scene.gltf" position="8.78167 3.4 -16.37093" scale="0.05 0.05 0.05" rotation="-90 270 0"></a-entity>
+      <a-entity id="glasskey" gltf-model="key_2/scene.gltf" position="14.19742 3.4 -10.34281" scale="2 2 2" rotation="0 90 0"></a-entity>
+
+      <a-entity id="safe" gltf-model="safe/scene.gltf" position="0.9317 7.70646 -0.00106" scale="0.03 0.03 0.03" rotation="0 90 0"></a-entity>
+      <a-entity id="door" gltf-model="wooden_door/scene.gltf" position="24.03297 1.20538 -0.00106" scale="1.5 1.5 1.5" rotation="0 -90 0"></a-entity>
+      <a-sky src="maze.jpg"></a-sky>
+    </a-scene>
+
+<div id="riddle">
+  <h2>Pick the right key to open the door.</h2>
+  <select id="owned">
+  <option value="">Select Key</option>
+  </select>
+
+  <button type="button" onclick="goout()">
+  press
+  </button>
+  <h4 class="close" onclick="document.querySelector('#riddle').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#riddle').style.display = 'none';}, 2000);">Close window</h4>
+</div>
+
+  </body>
+</html>
+
+<script>
+var woodkey = document.querySelector('#woodkey');
+      woodkey.addEventListener('fusing', function (evt) {
+        alert('Wooden key obtained!')
+        savekey('wood');
+        evt.target.setAttribute('animation', 'property: position; to: 14.19 1000 0; dur: 1000; easing: linear; loop: false');
+      });
+
+var Greenkey = document.querySelector('#Greenkey');
+      Greenkey.addEventListener('fusing', function (evt) {
+        alert('Green key obtained!')
+        savekey('green');
+        evt.target.setAttribute('animation', 'property: position; to: 14.19 1000 0; dur: 1000; easing: linear; loop: false');
+      });
+
+var glasskey = document.querySelector('#glasskey');
+      glasskey.addEventListener('fusing', function (evt) {
+        alert('Glass key obtained!')
+        savekey('glass');
+        evt.target.setAttribute('animation', 'property: position; to: 14.19 1000 0; dur: 1000; easing: linear; loop: false');
+      });
+
+
+    function savekey(x) {
+      var owned = document.getElementById('owned').innerHTML;
+      var addkey = '<option value="' + x + '">' + x + '</option>';
+      document.getElementById('owned').innerHTML = owned + addkey;
+      document.getElementById(x + 'key').style.display = 'none';
+    }
+
+    function goout() {
+      var selectedkey = document.getElementById('owned').value;
+     if (selectedkey == 'glass') {
+       alert('You hear the door open!');
+       location.replace('room_win.html');
+     } else {
+       alert('wrong key');
+     }
+    }
+
+    var door = document.querySelector('#door');
+    door.addEventListener('fusing', function (evt) {
+    // alert('yo')  
+      var check = document.querySelector('#riddle').style.display;
+      if (check == 'none') {
+        document.querySelector('#riddle').style.display = 'block';
+        setTimeout(function(){ 
+          document.querySelector('#riddle').style.opacity = '1';
+        }, 500);
+      } else {
+        document.querySelector('#riddle').style.opacity = '0';
+        setTimeout(function(){ 
+          document.querySelector('#riddle').style.display = 'none';
+        }, 1000);
+      }
+    });    
+</script>

@@ -1,0 +1,97 @@
+<html>
+<head>
+  <title>Room One</title>
+  <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
+  <style>
+    body {
+      font-family: 'Oswald', sans-serif;
+    }
+    #notif {
+      font-size:50px;
+      display:none;
+      color: red;
+    }
+
+    #riddle {
+      position: fixed;
+      top: 25%;
+      left: 11%;
+      width: 70%;
+      /*height: 30%;*/
+      background-color: rgba(252, 254, 1234, 0.8);
+      border-style: dotted;
+      border-width: 2px;
+      border-radius: 20px;
+      text-align: center;
+      margin: auto;
+      padding: 2%;
+      display: none;
+      opacity: 0;
+      transition: all 1s;
+    }
+
+    #ans {
+      border: none;
+      background-color: transparent;
+      font-size: 25px;
+    }
+
+    .close {
+      cursor: pointer;
+    }
+   </style>
+  </head>
+  <body>
+     <a-scene>
+      <a-entity camera="" position="-0.45306008503411477 5.50842 7.938381330573259" look-controls="" wasd-controls="" rotation="0 0 0"> 
+        <a-cursor fuse="true" fuseTimeout="500" ></a-cursor>
+      </a-entity>
+      <a-entity text="value: Can You Get Out?; align: center; color: #000000" position="14.56715 10.3819 0.87523" scale="40 40 0.00001" rotation="0 -90 0"></a-entity>
+      <a-entity id="room" gltf-model="room_one/scene.gltf" position="" scale="0.01 0.01 0.01"></a-entity>
+      <a-entity id="desk" gltf-model="desk/scene.gltf" position="14.19742 3.4 0" scale="1.5 1.5 1.5" rotation="0 -90 0"></a-entity>
+      <a-box id="cube" scale="5 5 5" position="14.19742 3.4 0" color="red" material="opacity: 0" geometry=""></a-box>
+      <a-sky src="space.jpg"></a-sky>
+    </a-scene>
+
+    <div id="riddle" style="display: none;">
+    <h2>I have keys but no locks. I have a space but no room. You can enter, but cannot go outside. What am I?</h2>
+    <input id="ans" placeholder="enter here..." />
+    <button type="button" onclick="getthis()">Answer</button>
+    <h4 class="close" onclick="document.querySelector('#riddle').style.opacity = '0';
+      setTimeout(function(){document.querySelector('#riddle').style.display = 'none';}, 2000);">Close window</h4>
+    
+    <div id="notif"></div>
+  </div>
+  </body>
+  <script>
+    var cube = document.querySelector('#cube');
+
+    cube.addEventListener('fusing', function (evt) {
+    // alert('yo')  
+      var check = document.querySelector('#riddle').style.display;
+      if (check == 'none') {
+        document.querySelector('#riddle').style.display = 'block';
+        setTimeout(function(){ 
+          document.querySelector('#riddle').style.opacity = '1';
+        }, 500);
+      } else {
+        document.querySelector('#riddle').style.opacity = '0';
+        setTimeout(function(){ 
+          document.querySelector('#riddle').style.display = 'none';
+        }, 1000);
+      }
+    });
+
+    function getthis() {
+      var x = document.getElementById('ans').value;
+      if (x == 'computer keyboard' || x == 'keyboard') {
+        location.replace('room_two.html');
+      } else {
+        document.getElementById('notif').style.display = 'block';
+        document.getElementById('notif').innerHTML = 'wrong';
+      }
+    }
+  </script>
+  </html>
